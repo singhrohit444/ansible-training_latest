@@ -147,4 +147,54 @@ localhost | SUCCESS => {
         "Processing triggers for ufw (0.35-0ubuntu2) ..."
     ]
 }
-
+```
+```
+ansible localhost -m apt -a "name=apache2 state=absent"
+localhost | SUCCESS => {
+    "changed": true, 
+    "stderr": "", 
+    "stderr_lines": [], 
+    "stdout": "Reading package lists...\nBuilding dependency tree...\nReading state information...\nThe following packages were automatically installed and are no longer required:\n  apache2-data apache2-utils bridge-utils containerd\n  gir1.2-javascriptcoregtk-4.0 gir1.2-json-1.0 gir1.2-soup-2.4\n  gir1.2-webkit2-4.0 libatkmm-1.6-1v5 libcairomm-1.0-1v5 libglibmm-2.4-1v5\n  libido3-0.1-0 libmircommon5 libpangomm-1.4-1v5 libsigc++-2.0-0v5 runc\n  sbsigntool ubuntu-fan\nUse 'sudo apt autoremove' to remove them.\nThe following packages will be REMOVED:\n  apache2\n0 upgraded, 0 newly installed, 1 to remove and 358 not upgraded.\nAfter this operation, 501 kB disk space will be freed.\n(Reading database ... \r(Reading database ... 5%\r(Reading database ... 10%\r(Reading database ... 15%\r(Reading database ... 20%\r(Reading database ... 25%\r(Reading database ... 30%\r(Reading database ... 35%\r(Reading database ... 40%\r(Reading database ... 45%\r(Reading database ... 50%\r(Reading database ... 55%\r(Reading database ... 60%\r(Reading database ... 65%\r(Reading database ... 70%\r(Reading database ... 75%\r(Reading database ... 80%\r(Reading database ... 85%\r(Reading database ... 90%\r(Reading database ... 95%\r(Reading database ... 100%\r(Reading database ... 197264 files and directories currently installed.)\r\nRemoving apache2 (2.4.18-2ubuntu3.5) ...\r\nProcessing triggers for man-db (2.7.5-1) ...\r\nProcessing triggers for ufw (0.35-0ubuntu2) ...\r\n", 
+    "stdout_lines": [
+        "Reading package lists...", 
+        "Building dependency tree...", 
+        "Reading state information...", 
+        "The following packages were automatically installed and are no longer required:", 
+        "  apache2-data apache2-utils bridge-utils containerd", 
+        "  gir1.2-javascriptcoregtk-4.0 gir1.2-json-1.0 gir1.2-soup-2.4", 
+        "  gir1.2-webkit2-4.0 libatkmm-1.6-1v5 libcairomm-1.0-1v5 libglibmm-2.4-1v5", 
+        "  libido3-0.1-0 libmircommon5 libpangomm-1.4-1v5 libsigc++-2.0-0v5 runc", 
+        "  sbsigntool ubuntu-fan", 
+        "Use 'sudo apt autoremove' to remove them.", 
+        "The following packages will be REMOVED:", 
+        "  apache2", 
+        "0 upgraded, 0 newly installed, 1 to remove and 358 not upgraded.", 
+        "After this operation, 501 kB disk space will be freed.", 
+        "(Reading database ... ", 
+        "(Reading database ... 5%", 
+        "(Reading database ... 10%", 
+        "(Reading database ... 15%", 
+        "(Reading database ... 20%", 
+        "(Reading database ... 25%", 
+        "(Reading database ... 30%", 
+        "(Reading database ... 35%", 
+        "(Reading database ... 40%", 
+        "(Reading database ... 45%", 
+        "(Reading database ... 50%", 
+        "(Reading database ... 55%", 
+        "(Reading database ... 60%", 
+        "(Reading database ... 65%", 
+        "(Reading database ... 70%", 
+        "(Reading database ... 75%", 
+        "(Reading database ... 80%", 
+        "(Reading database ... 85%", 
+        "(Reading database ... 90%", 
+        "(Reading database ... 95%", 
+        "(Reading database ... 100%", 
+        "(Reading database ... 197264 files and directories currently installed.)", 
+        "Removing apache2 (2.4.18-2ubuntu3.5) ...", 
+        "Processing triggers for man-db (2.7.5-1) ...", 
+        "Processing triggers for ufw (0.35-0ubuntu2) ..."
+    ]
+}
+```
