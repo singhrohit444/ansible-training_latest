@@ -21,18 +21,18 @@ localhost | SUCCESS => {
 }
 ```
 ```
-/opt/ansible/ansible#  ansible localhost -m copy -a "src=/etc/ansible/hosts dest=/tmp/hosts group=root owner=root mode=400"
+/opt/ansible/ansible#  ansible localhost -m copy -a "src=/tmp/new dest=/tmp/test/ group=root owner=root mode=400 backup=yes"
 localhost | SUCCESS => {
     "changed": true, 
-    "checksum": "3fef16749c9b9f68430d763d738903feedcc4514", 
-    "dest": "/tmp/hosts", 
+    "checksum": "da39a3ee5e6b4b0d3255bfef95601890afd80709", 
+    "dest": "/tmp/test/new", 
     "gid": 0, 
     "group": "root", 
+    "md5sum": "d41d8cd98f00b204e9800998ecf8427e", 
     "mode": "0400", 
     "owner": "root", 
-    "path": "/tmp/hosts", 
-    "size": 1036, 
+    "size": 0, 
+    "src": "/root/.ansible/tmp/ansible-tmp-1510590625.63-22887254787602/source", 
     "state": "file", 
     "uid": 0
 }
-
