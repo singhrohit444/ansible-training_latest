@@ -1,6 +1,7 @@
+#pass host names as argument
 ---
 - name: Nginx Setup play
-  hosts: webaza
+  hosts: "{{hosts}}"
   tasks:
     - name: Installing nginx
       apt: name=nginx state=installed
