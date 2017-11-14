@@ -22,4 +22,13 @@ localhost | SUCCESS => {
     "state": "stopped"
 }
 ```
-
+```
+ansible localhost -m service -a "name=nginx state=restarted enabled=yes"
+localhost | SUCCESS => {
+    "changed": true, 
+    "enabled": true, 
+    "failed": false, 
+    "name": "nginx", 
+    "state": "started"
+}
+```
