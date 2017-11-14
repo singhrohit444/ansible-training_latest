@@ -41,3 +41,13 @@ localhost | SUCCESS => {
     "failed": false
 }
 ```
+```
+ansible localhost -m git -a "repo=https://github.com/opstree-ansible/ansible-training.git dest=/home/train1 version=master  verify_commit=no track_submodules=yes"
+localhost | SUCCESS => {
+    "after": "d59a97876f22ccfbaee1cdead00defbf1c8df039", 
+    "before": "061858bd3eb2714434689b24d0bb008dec66dff9", 
+    "changed": true, 
+    "failed": false, 
+    "remote_url_changed": false
+}
+```
