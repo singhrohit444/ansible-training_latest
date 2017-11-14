@@ -1,4 +1,4 @@
-* I'll show you how to user  module of ansible
+* I'll show you how to use group  module of ansible
 * Short documentation about command
 ```
 Manage presence of groups on a host
