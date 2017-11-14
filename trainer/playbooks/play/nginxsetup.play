@@ -1,4 +1,5 @@
 #pass host names as argument
+#ansible-playbook -e "hosts=webazb" nginxsetup.play
 ---
 - name: Nginx Setup play
   hosts: "{{hosts}}"
