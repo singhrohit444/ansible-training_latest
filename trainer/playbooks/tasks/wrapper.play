@@ -1,0 +1,7 @@
+#ansible-playbook  consolidated.play
+---
+- name: Play to install nginx using imported tasks
+- tasks:
+  - import_tasks: install_nginx.task
+  - import_tasks: start_nginx.task
+...
