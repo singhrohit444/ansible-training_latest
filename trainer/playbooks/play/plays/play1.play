@@ -1,0 +1,8 @@
+#ansible-playbook  play1.play
+---
+- name: Nginx Installation play
+  hosts: webaza
+  tasks:
+    - name: Start nginx
+      service: name=nginx state=started enabled=on
+...

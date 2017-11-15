@@ -1,0 +1,4 @@
+#ansible-playbook  consolidated.play
+---
+- import_playbook: play1.yaml
+- import_playbook: play2.yaml
