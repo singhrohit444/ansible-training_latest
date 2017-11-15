@@ -1,6 +1,6 @@
 #ansible-playbook  play2.play
 ---
-- name: Play to start nginx service
+- name: Play to install nginx
   hosts: webaza
   tasks:
     - name: Installing nginx
