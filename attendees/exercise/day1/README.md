@@ -6,7 +6,7 @@ Host a static website on one of target server, content of static website is avai
   * You will need to install below softwares
     * git
     * nginx
-  * You have to get the code available in the git repository(https://github.com/opstree-ansible/ansible-training/blob/master/attendees/exercise/website/index.html) at  /usr/share/nginx/html
+  * You have to get the code available in the git repository(https://raw.githubusercontent.com/opstree-ansible/ansible-training/master/attendees/exercise/website/index.html) at  /usr/share/nginx/html
   * Owner of /usr/share/nginx/html and it's sub folders should be nginx user.
 * Validations
   * On server itself
