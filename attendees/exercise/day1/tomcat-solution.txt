@@ -1,0 +1,11 @@
+Adhoc Commands
+ansible localhost -a "apt-get update"
+ansible localhost -a "apt-get -y install tomcat7"
+ansible localhost -a "service tomcat7 status"
+ansible localhost -a "service tomcat7 start"
+ansible localhost -a "apt-get -y install curl wget"
+ansible localhost -a "curl localhost"
+ansible localhost -a "bash -c 'curl -k https://github.com/opstree-ansible/ansible-training/blob/master/attendees/exercise/application/sample.war > /var/lib/tomcat7/webapps/sample.war'"
+ansible localhost -a "service tomcat7 restart"
+ansible localhost -a "curl localhost:8080/sample/"
+
