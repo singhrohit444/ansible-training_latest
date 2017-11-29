@@ -7,6 +7,11 @@ build-cserver:
 build-tserver:
 	docker build -t training/ansible:tserver -f Dockerfile.tserver .
 
+build-all:
+	make build
+	make build-cserver
+	make build-tserver
+
 run-web-az-a:
 	docker rm -f webaza || true
 	docker run -h webaza --name webaza -itd training/ansible:tserver /bin/bash
@@ -43,3 +48,7 @@ run-all:
 	make run-db-az-a
 	make run-db-az-b
 	make run-control-server
+
+make start-lab:
+	make build-all
+	make run-all
