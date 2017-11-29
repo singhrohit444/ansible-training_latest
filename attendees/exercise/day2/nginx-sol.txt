@@ -18,7 +18,7 @@
       command: bash -c 'curl -k https://raw.githubusercontent.com/opstree-ansible/ansible-training/master/attendees/exercise/website/index.html > /usr/share/nginx/html/index.html'
 
     - name: Install Wget
-      apt: name=nginx state=present
+      apt: name=wget state=present
       
   handlers:
     - name: start nginx service
