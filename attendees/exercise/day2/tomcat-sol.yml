@@ -1,0 +1,38 @@
+---
+- hosts: localhost
+  become: true
+  become_user: root
+  tasks:
+    - name: Update the cache...
+      apt: update_cache=yes
+
+    - name: Install Nginx
+      apt: name=tomcat7 state=present
+      notify:
+        - start tomcat service
+   
+    - name: Install Nginx
+      apt: name=git state=present
+
+    - name: Install Curl
+      apt: name=curl state=present
+  
+    - name: Code clone
+      git:
+        repo: 'https://github.com/opstree-ansible/ansible-training.git'
+        dest: /root/ansible-training
+    
+    - name: Copy sample war file
+      copy:
+        src: /root/ansible-training/attendees/exercise/application/sample.war
+        dest: /var/lib/tomcat7/webapps/sample.war
+        remote_src: yes
+      notify:
+        - Restart tomcat service
+      
+  handlers:
+    - name: start tomcat service
+      service: name=tomcat7 state=started
+  
+    - name: Restart tomcat service
+      service: name=tomcat7 state=restarted
