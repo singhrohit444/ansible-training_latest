@@ -1,0 +1,8 @@
+ansible localhost -a "apt-get update"
+ansible localhost -a "apt-get -y install nginx"
+ansible localhost -a "service nginx status"
+ansible localhost -a "service nginx start"
+ansible localhost -a "apt-get -y install curl wget"
+ansible localhost -a "curl localhost"
+ansible localhost -a "bash -c 'curl -k https://raw.githubusercontent.com/opstree-ansible/ansible-training/master/attendees/exercise/website/index.html > /usr/share/nginx/html/index.html'"
+ansible localhost -a "curl localhost"
