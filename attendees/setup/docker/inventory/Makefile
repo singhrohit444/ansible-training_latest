@@ -33,7 +33,7 @@ run-db-az-b:
 
 run-control-server:
 	docker rm -f cserver || true
-	docker run -h cserver --name cserver -itd training/ansible:cserver /bin/bash
+	docker run -h cserver --name cserver --link webaza:webaza --link webazb:webazb --link appaza:appaza --link appazb:appazb --link dbaza:dbaza --link dbazb:dbazb -itd training/ansible:cserver /bin/bash
 
 run-all:
 	make run-web-az-a
