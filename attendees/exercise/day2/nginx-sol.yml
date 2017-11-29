@@ -1,0 +1,25 @@
+---
+- hosts: localhost
+  become: true
+  become_user: root
+  tasks:
+    - name: Update the cache...
+      apt: update_cache=yes
+
+    - name: Install Nginx
+      apt: name=nginx state=present
+      notify:
+        - start nginx service
+
+    - name: Install Curl
+      apt: name=curl state=present
+
+    - name: content of website
+      command: bash -c 'curl -k https://raw.githubusercontent.com/opstree-ansible/ansible-training/master/attendees/exercise/website/index.html > /usr/share/nginx/html/index.html'
+
+    - name: Install Wget
+      apt: name=wget state=present
+      
+  handlers:
+    - name: start nginx service
+      service: name=nginx state=started
