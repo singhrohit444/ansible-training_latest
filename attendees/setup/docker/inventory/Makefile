@@ -14,27 +14,27 @@ build-all:
 
 run-web-az-a:
 	docker rm -f webaza || true
-	docker run -h webaza --name webaza -itd training/ansible:tserver /bin/bash
+	docker run -h webaza --name webaza -itd training/ansible:tserver
 
 run-web-az-b:
 	docker rm -f webazb || true
-	docker run -h webazb --name webazb -itd training/ansible:tserver /bin/bash
+	docker run -h webazb --name webazb -itd training/ansible:tserver
 
 run-app-az-a:
 	docker rm -f appaza || true
-	docker run -h appaza --name appaza -itd training/ansible:tserver /bin/bash
+	docker run -h appaza --name appaza -itd training/ansible:tserver
 
 run-app-az-b:
 	docker rm -f appazb || true
-	docker run -h appazb --name appazb -itd training/ansible:tserver /bin/bash
+	docker run -h appazb --name appazb -itd training/ansible:tserver
 
 run-db-az-a:
 	docker rm -f dbaza || true
-	docker run -h dbaza --name dbaza -itd training/ansible:tserver /bin/bash
+	docker run -h dbaza --name dbaza -itd training/ansible:tserver
 
 run-db-az-b:
 	docker rm -f dbazb || true
-	docker run -h dbazb --name dbazb -itd training/ansible:tserver /bin/bash
+	docker run -h dbazb --name dbazb -itd training/ansible:tserver
 
 run-control-server:
 	docker rm -f cserver || true
@@ -49,6 +49,6 @@ run-all:
 	make run-db-az-b
 	make run-control-server
 
-make start-lab:
+start-lab:
 	make build-all
 	make run-all
