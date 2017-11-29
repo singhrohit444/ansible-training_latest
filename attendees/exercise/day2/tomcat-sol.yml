@@ -6,12 +6,12 @@
     - name: Update the cache...
       apt: update_cache=yes
 
-    - name: Install Nginx
+    - name: Install Tomcat
       apt: name=tomcat7 state=present
       notify:
         - start tomcat service
    
-    - name: Install Nginx
+    - name: Install Git
       apt: name=git state=present
 
     - name: Install Curl
