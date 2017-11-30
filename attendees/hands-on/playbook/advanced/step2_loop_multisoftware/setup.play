@@ -1,0 +1,8 @@
+#ansible-playbook  setup.play
+---
+- name: Play to install nginx with customised index page
+  hosts: web
+  tasks:
+    - import_tasks: updateCache.task
+    - import_tasks: installNginx.task
+...
