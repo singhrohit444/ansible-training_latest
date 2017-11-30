@@ -1,0 +1,8 @@
+---
+## handling nginx
+
+- name: start tomcat service
+  service: name=tomcat7 state=started
+
+- name: restart tomcat service
+  service: name=tomcat7 state=restarted
