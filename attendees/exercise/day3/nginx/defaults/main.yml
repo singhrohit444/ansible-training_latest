@@ -1,0 +1,5 @@
+---
+
+website_content_path: "/usr/share/nginx/html/index.html"
+file_name: "index.html.j2"
+content: I'm the index page of Ansible assignment static website
