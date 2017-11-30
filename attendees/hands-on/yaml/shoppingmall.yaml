@@ -1,0 +1,39 @@
+---
+cities:
+  - delhi:
+    location:
+      - SoutEx:
+        Malls:
+          - Ambience Mall:
+            Area: Vasant Kunj
+            Manager:
+              Name: Sandeep
+              Address: Faridabad
+              Contact No: 99999999
+            Shops:
+              - Reebok
+              - Adidas
+              - Not Just Paranthas
+              - Dominos
+              - Bar Be Queue:
+                Floor: Third
+                Contact No: 99999999
+                Starting Hours: 6 pm
+                Closing Hours: 12 pm
+                Theme: Buffet
+                Rating: 4.5
+                Cost for 2: 1500
+                Menu:
+                  - Starter
+                  - Soups
+                  - Salads
+                  - Main Course
+                  - Desserts
+          - Metropolitan
+          - Select sity Walk
+      - Rajouri Garden
+      - Rohini
+      - Punjabi Baghi
+  - bangalore
+  - hyderabad
+...
