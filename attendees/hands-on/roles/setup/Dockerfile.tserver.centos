@@ -1,0 +1,7 @@
+FROM training/ansible:centos
+
+COPY cserver.pub /root/.ssh/authorized_keys
+RUN chmod 600 /root/.ssh/authorized_keys
+RUN yum -y install openssh-server
+
+CMD service sshd start && /bin/bash
