@@ -1,0 +1,6 @@
+---
+
+git_url: https://github.com/opstree-ansible/ansible-training.git
+dest_path: /root/ansible-training
+war_file_path: "/root/ansible-training/attendees/exercise/application/sample.war"
+wepapps_path: "/var/lib/tomcat7/webapps/sample.war"

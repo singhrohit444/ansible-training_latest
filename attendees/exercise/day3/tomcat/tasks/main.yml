@@ -1,0 +1,33 @@
+---
+
+#- name: Update the cache...
+#  apt: update_cache=yes
+
+- name: Install Tomcat
+  apt: name={{ item }} state=present
+  with_items:
+      - tomcat7
+      - git
+      - curl
+  notify:
+    - start tomcat service
+
+- name: Code clone
+  git:
+    repo: "{{ git_url }}"
+    dest: "{{ dest_path }}"
+
+#- name: Code clone
+#  git: repo={{ git_url }} dest={{ dest_path }}
+#    repo: "{{ 'git_url' }}"
+#    dest: "{{ dest_path }}"
+
+- name: Copy sample war file
+  copy:
+    src: "{{ war_file_path }}"
+    dest: "{{ wepapps_path }}"
+    remote_src: yes
+  notify:
+    - restart tomcat service
+
+
