@@ -1,0 +1,3 @@
+- name: Update the cache...
+  apt: update_cache=yes
+  ignore_errors: yes
