@@ -1,4 +1,4 @@
-FROM training/ansible
+FROM training/ansible:ubuntu
 
 COPY cserver.pub /root/.ssh/authorized_keys
 RUN chmod 600 /root/.ssh/authorized_keys
