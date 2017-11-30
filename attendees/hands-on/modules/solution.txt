@@ -1,0 +1,10 @@
+ansible webaza -m apt -a "name=nginx state=present"
+ansible webaza -m copy -a "content='Hi from Sandeep' dest='/usr/share/nginx/html/index.html'"
+ansible webaza -m service -a "name=nginx state=started"
+
+- If we have to use template
+echo "Hi From {{ user }}" > /tmp/index.html
+- Update inventory host file by adding a variable "user"
+- Run template module to generate file
+ansible webaza -m template -a "src=/tmp/index.html dest='/usr/share/nginx/html/index.html'"
+- You can also evaluate breaking the inventory file and storing variables.
