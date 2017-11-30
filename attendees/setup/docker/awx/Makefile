@@ -1,10 +1,10 @@
 run-rabbitmq:
 	docker rm -f rabbitmq || true
-	docker run -itd --name rabbitmq -e RABBITMQ_DEFAULT_VHOST:awx rabbitmq:3
+	docker run -itd --name rabbitmq -e RABBITMQ_DEFAULT_VHOST=awx rabbitmq:3
 
 run-postgres:
 	docker rm -f postgres || true
-	docker run -itd --name postgres  -e POSTGRES_USER:awx -e POSTGRES_PASSWORD:awxpass -e POSTGRES_DB:awx postgres:9.6
+	docker run -itd --name postgres  -e POSTGRES_USER=awx -e POSTGRES_PASSWORD=awxpass -e POSTGRES_DB=awx postgres:9.6
 
 run-memcached:
 	docker rm -f memcached || true
@@ -20,7 +20,7 @@ run-awxtask:
 	docker rm -f awxtask || true
 	docker run -itd --name awxtask --link rabbitmq:rabbitmq --link memcached:memcached --link postgres:postgres --link awxweb:awxweb training/ansible:awxweb
 
-run-all:
+start-lab:
 	make run-rabbitmq
 	make run-postgres
 	make run-memcached
