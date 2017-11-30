@@ -1,0 +1,18 @@
+- name: Install Nginx on Ubuntu
+  apt: name=nginx state=present update_cache=no
+  when: ansible_os_family == "Debian"
+- name: Install Nginx on Redhat Phase I
+  yum:
+    name: "{{ item }}"
+    state: present
+  with_items:
+    - "epel-release"
+  when: ansible_os_family == "RedHat"
+- name: Install Nginx on Redhat Phase II
+  yum:
+    name: "{{ item }}"
+    state: present
+  with_items:
+    - "git"
+    - "nginx"
+  when: ansible_os_family == "RedHat"

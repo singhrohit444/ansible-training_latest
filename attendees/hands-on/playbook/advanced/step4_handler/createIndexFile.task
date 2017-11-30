@@ -1,0 +1,4 @@
+- name: Create Index file
+  template: src=index.j2 dest=/usr/share/nginx/html/index.html
+  notify:
+    - restart nginx service
