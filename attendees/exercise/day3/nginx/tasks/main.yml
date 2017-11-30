@@ -1,0 +1,16 @@
+---
+
+- name: Update the cache...
+  apt: update_cache=yes
+
+- name: Install Nginx
+  apt: name={{ item }} state=present
+  with_items:
+      - nginx
+      - curl
+  notify:
+    - start nginx service
+
+- name: Content of website ...
+  template: src={{ file_name }} dest={{ website_content_path }} 
+  notify: restart nginx service
