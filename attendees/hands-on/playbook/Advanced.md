@@ -29,8 +29,8 @@
     Core: 4
     ```
     * /etc/motd is the file that you have to update
-  * Store the timestamp when last time /etc/motd got updated
+  * Store the timestamp when last time /etc/motd got updated | 10 minutes Self | 5 Minutes trainer
   ```
-  May be you can update info here | 10 minutes Self | 5 Minutes trainer
+  May be you can update info here
   /tmp/logGenerator.log
   ```
