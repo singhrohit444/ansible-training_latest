@@ -1,0 +1,6 @@
+- name: I'm creating a user
+  user:
+    name: ubuntu
+    comment: "Hi I'm a Debian system do whatever"
+  when:
+    ansible_os_family == "Debian"

@@ -1,0 +1,12 @@
+#ansible-playbook  setup.play
+---
+- name: Play for advanced 2
+  hosts:
+    - webaza
+    - webazb
+  tasks:
+    - import_tasks: userCreation.task
+#    - import_tasks: loginMessageGenerator.task
+  handlers:
+    - import_tasks: loginMessageGeneratorTracker.task
+...

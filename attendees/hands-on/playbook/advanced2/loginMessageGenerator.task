@@ -1,0 +1,6 @@
+- name: Generating the login message file
+  template:
+    src: loginMessage.j2
+    dest: /etc/motd
+  notify:
+    - Update loginGenerator Tracker

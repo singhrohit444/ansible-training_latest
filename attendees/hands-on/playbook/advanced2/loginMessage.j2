@@ -1,0 +1,8 @@
+Welcome to {{ ansible_distribution_file_variety }} system
+Time zone : {{ ansible_date_time.tz }}
+Current Memory Usage
+total : {{ ansible_memory_mb.real.total }}
+used : {{ ansible_memory_mb.real.used }}
+free : {{ ansible_memory_mb.real.free }}
+Processor
+Core: {{ ansible_processor_count }}
