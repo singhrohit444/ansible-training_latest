@@ -18,7 +18,7 @@ run-awxweb:
 run-awxtask:
 	docker build -t training/ansible:awxtask -f Dockerfile.awxtask .
 	docker rm -f awxtask || true
-	docker run -itd --name awxtask --link rabbitmq:rabbitmq --link memcached:memcached --link postgres:postgres --link awxweb:awxweb training/ansible:awxweb
+	docker run -itd --name awxtask --link rabbitmq:rabbitmq --link memcached:memcached --link postgres:postgres --link awxweb:awxweb training/ansible:awxtask
 
 start-lab:
 	make run-rabbitmq
