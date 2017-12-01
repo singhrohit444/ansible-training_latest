@@ -1,0 +1,17 @@
+- name: Install Nginx on Redhat Phase I
+  yum:
+    name: "{{ item }}"
+    state: present
+  with_items:
+    - "epel-release"
+  when: ansible_os_family == "RedHat"
+- name: Install Nginx on Redhat Phase II
+  yum:
+    name: "{{ item }}"
+    state: present
+  with_items:
+    - "git"
+    - "nginx"
+  when: ansible_os_family == "RedHat"
+- name: Uploading index.html ...
+  template: src={{ index_file_name }} dest={{ index_file_dest_path }}
