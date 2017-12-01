@@ -16,8 +16,8 @@
     * I should be able to pass user name in index.html from commandline
     *
 * Assignment 2
-  * Create a user ubuntu if OS is Debian
-  * Update the default login message stating
+  * Create a user ubuntu if OS is Debian  | 10 minutes Self | 5 Minutes trainer
+  * Update the default login message stating | 10 minutes Self | 5 Minutes trainer
   ```
   Welcome to Debian system
   Time zone : UTC
@@ -31,6 +31,6 @@
     * /etc/motd is the file that you have to update
   * Store the timestamp when last time /etc/motd got updated
   ```
-  May be you can update info here
+  May be you can update info here | 10 minutes Self | 5 Minutes trainer
   /tmp/logGenerator.log
   ```
