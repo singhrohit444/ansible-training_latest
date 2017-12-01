@@ -1,0 +1,4 @@
+---
+- hosts: "web"
+  roles:
+    - role: /code/solution/step1/roles/nginx
