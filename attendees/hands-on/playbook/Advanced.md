@@ -34,3 +34,23 @@
   May be you can update info here
   /tmp/logGenerator.log
   ```
+  * Once done that's validate it like
+  ```
+  root@cserver:/tmp# ssh webaza
+  Welcome to Ubuntu 14.04.5 LTS (GNU/Linux 4.9.13-moby x86_64)
+
+   * Documentation:  https://help.ubuntu.com/
+  Welcome to Debian system
+  Time zone : UTC
+  Current Memory Usage
+  total : 1998
+  used : 470
+  free : 1528
+  Processor
+  Core: 4
+  Last login: Fri Dec  1 03:46:32 2017 from 172.17.0.8
+  root@webaza:~# cat /tmp/logGenerator.log
+  executed on  Fri Dec 1 03:45:20 UTC 2017
+  executed on  Fri Dec 1 03:46:22 UTC 2017
+  executed on  Fri Dec 1 03:46:32 UTC 2017
+  ```
