@@ -29,3 +29,8 @@
   Core: 4
   ```
     * /etc/motd is the file that you have to update
+  * Store the timestamp when last time /etc/motd got updated
+  ```
+  May be you can update info here
+  /tmp/logGenerator.log
+  ```
