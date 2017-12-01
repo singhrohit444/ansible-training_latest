@@ -18,16 +18,16 @@
 * Assignment 2
   * Create a user ubuntu if OS is Debian  | 10 minutes Self | 5 Minutes trainer
   * Update the default login message stating | 10 minutes Self | 5 Minutes trainer
-  ```
-  Welcome to Debian system
-  Time zone : UTC
-  Current Memory Usage
-  total : 1998
-  used : 1876
-  free : 122
-  Processor
-  Core: 4
-  ```
+    ```
+    Welcome to Debian system
+    Time zone : UTC
+    Current Memory Usage
+    total : 1998
+    used : 1876
+    free : 122
+    Processor
+    Core: 4
+    ```
     * /etc/motd is the file that you have to update
   * Store the timestamp when last time /etc/motd got updated
   ```
